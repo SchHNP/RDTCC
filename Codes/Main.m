@@ -1,6 +1,6 @@
 
 %%
-Data_EEG = rand(19, 125000);
+Data_EEG = rand(64, 125000);
 [bic, aic] = mvar_model_order(Data_EEG, 2, 20);
 fs = 250;
 ADTF_Sub =  ADTF(Data_EEG', 8, 13, bic, fs, 1);
